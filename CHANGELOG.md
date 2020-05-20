@@ -2,17 +2,17 @@
 
 #### 🐛 Bug Fix
 
-- ignore storybook static (amitm@media.net)
+- ignore storybook static (amitmishra009v@gmail.com)
 
-#### ⚠️  Pushed to `master`
+#### ⚠️ Pushed to `master`
 
-- docs created (amitm@media.net)
-- circleci config for chromatic (amitm@media.net)
-- link component test added (amitm@media.net)
-- visual testing to the continuous integration job (amitm@media.net)
-- circle config added (amitm@media.net)
-- basic-structure-setup (amitm@media.net)
+- docs created (amitmishra009v@gmail.com)
+- circleci config for chromatic (amitmishra009v@gmail.com)
+- link component test added (amitmishra009v@gmail.com)
+- visual testing to the continuous integration job (amitmishra009v@gmail.com)
+- circle config added (amitmishra009v@gmail.com)
+- basic-structure-setup (amitmishra009v@gmail.com)
 
 #### Authors: 1
 
-- amit.mish (amitm@media.net)
+- Amit Mishra ([@amitmishrg](https://github.com/amitmishrg))

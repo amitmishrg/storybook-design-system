@@ -1,7 +1,12 @@
 {
-  "name": "storybook-design-system",
+  "name": "basic-storybook-design-system",
   "version": "0.1.0",
-  "private": true,
+  "description": "Basic version of Storybook design system",
+  "main": "index.js",
+  "repository": "https://github.com/amitmishrg/storybook-design-system.git",
+  "author": "amitmishra009v@gmail.com",
+  "license": "MIT",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -14,14 +19,17 @@
     "styled-components": "^5.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "build-storybook-docs": "build-storybook -s public --docs",
     "chromatic": "chromatic --project-token=osrwohkx0la"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@storybook/addon-a11y": "^5.3.18",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-docs": "^5.3.18",
@@ -48,7 +57,9 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-create-react-app": "^2.1.2",
     "@storybook/react": "^5.3.18",
+    "auto": "^9.34.1",
     "chromatic": "^4.0.3",
+    "cross-env": "^7.0.2",
     "prettier": "^2.0.5"
   }
 }
