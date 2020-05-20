@@ -1,12 +1,27 @@
 {
   "name": "basic-storybook-design-system",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Basic version of Storybook design system",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": "https://github.com/amitmishrg/storybook-design-system.git",
   "author": "amitmishra009v@gmail.com",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "build": "rm -rf dist && cross-env NODE_ENV=production babel src -d dist",
+    "prepare": "npm run build",
+    "test": "react-scripts test",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "build-storybook-docs": "build-storybook -s public --docs",
+    "chromatic": "chromatic --project-token=osrwohkx0la",
+    "release": "auto shipit"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -18,20 +33,10 @@
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.0"
   },
-  "scripts": {
-    "build": "cross-env BABEL_ENV=production babel src -d dist",
-    "prepare": "npm run build",
-    "test": "react-scripts test",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
-    "build-storybook-docs": "build-storybook -s public --docs",
-    "chromatic": "chromatic --project-token=osrwohkx0la",
-    "release": "auto shipit"
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,6 +55,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
+    "@babel/preset-react": "^7.9.4",
     "@storybook/addon-a11y": "^5.3.18",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-docs": "^5.3.18",
