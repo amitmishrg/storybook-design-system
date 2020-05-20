@@ -1,6 +1,6 @@
 {
   "name": "basic-storybook-design-system",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Basic version of Storybook design system",
   "main": "index.js",
   "repository": "https://github.com/amitmishrg/storybook-design-system.git",
@@ -20,6 +20,7 @@
   },
   "scripts": {
     "build": "cross-env BABEL_ENV=production babel src -d dist",
+    "prepare": "npm run build",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
